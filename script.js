@@ -9,7 +9,18 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
+	
   //your code here
+	let romanLetter = '';
+	let number = num;
+	for(let i=0;i<obj.length;i++){
+		if(obj[i]<=number){
+			number =number - obj[i];
+			romanLetter = romanLetter+obj[i];
+		i--;
+		}
+	}
+	console.log(romanLetter)
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
