@@ -11,16 +11,16 @@ function convertToRoman(num) {
 
 	
   //your code here
-	let roman = '';
-	let number = num;
-	for(let i=0;i<obj.length;i++){
-		if(obj[i]<=number){
-			number =number - obj[i];
-			roman = roman+obj[i];
-		i--;
+	var roman = "";
+	for(var key in obj) {
+		
+		while (num >= obj[key]) {
+		roman += key;
+			num -= obj[key];
+			
 		}
 	}
-	console.log(roman)
+	return roman;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
